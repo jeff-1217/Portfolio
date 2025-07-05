@@ -168,12 +168,13 @@ section {
   transform: translateX(-50%);
 }
 
-/* Profile Section */
+/* Profile Section - FIXED CIRCLE ISSUE */
 #profile {
   height: 100vh;
   position: relative;
   overflow: hidden;
   text-align: center;
+  padding-top: 80px; /* Added for nav bar space */
 }
 
 #profile .section-container {
@@ -183,6 +184,7 @@ section {
   gap: var(--space-2xl);
   height: 100%;
   flex-direction: column;
+  padding-top: var(--space-xl); /* Added padding */
 }
 
 .section__pic-container {
@@ -195,6 +197,8 @@ section {
   transition: var(--transition-normal);
   position: relative;
   margin: 0 auto;
+  /* Fixed aspect ratio to maintain circle shape */
+  aspect-ratio: 1/1;
 }
 
 .section__pic-container:hover {
@@ -232,6 +236,7 @@ section {
   display: flex;
   flex-direction: column;
   gap: var(--space-sm);
+  padding: 0 var(--space-md); /* Added padding for mobile */
 }
 
 .section__text__p1 {
@@ -367,7 +372,6 @@ section {
   40% { transform: translateY(-15px) translateX(-50%); }
   60% { transform: translateY(-7px) translateX(-50%); }
 }
-
 
 /* Experience Section */
 .experience-details-container {
@@ -728,7 +732,7 @@ footer p {
 .reveal {
   opacity: 0;
   transform: translateY(30px);
-  transition: all 1s ease;
+  transition: all 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 .reveal.active {
@@ -796,7 +800,7 @@ nav {
   width: 100%;
 }
 
-/* Mobile Navigation - COMPLETELY REWORKED */
+/* Mobile Navigation */
 #hamburger-nav {
   display: none;
   z-index: 2000;
@@ -959,110 +963,129 @@ body.menu-active > footer {
 /* Responsive Design */
 @media (max-width: 1200px) {
   .about-containers {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
   
   .details-container {
-      max-width: 100%;
+    max-width: 100%;
   }
   
   .section__pic-container {
-      margin-bottom: var(--space-xl);
+    margin-bottom: var(--space-xl);
   }
 }
 
 @media (max-width: 992px) {
   .about-content {
-      flex-direction: column;
+    flex-direction: column;
   }
   
   .about-image-container {
-      margin-bottom: var(--space-xl);
+    margin-bottom: var(--space-xl);
   }
 }
 
 @media (max-width: 768px) {
   html {
-      font-size: 14px;
+    font-size: 14px;
   }
   
   #profile {
-      padding-top: 8rem;
+    padding-top: 80px;
+    height: auto;
+    min-height: 100vh;
   }
   
   .section__pic-container {
-      width: 300px;
-      height: 300px;
+    width: 280px;
+    height: 280px;
+    max-width: 90vw;
+    max-height: 90vw; /* Ensures perfect circle on all devices */
   }
   
   .projects-grid {
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
   
   .contact-info-upper-container {
-      flex-direction: column;
-      gap: var(--space-md);
+    flex-direction: column;
+    gap: var(--space-md);
   }
   
   #desktop-nav {
-      display: none;
+    display: none;
   }
   
   #hamburger-nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
   }
   
   .theme-toggle:not(.mobile-theme-toggle) {
-      display: none;
+    display: none;
   }
   
   .theme-label {
-      width: 50px;
-      height: 25px;
+    width: 50px;
+    height: 25px;
   }
   
   .theme-ball {
-      width: 18px;
-      height: 18px;
+    width: 18px;
+    height: 18px;
   }
   
   .theme-switch:checked + .theme-label .theme-ball {
-      transform: translateX(25px);
+    transform: translateX(25px);
+  }
+  
+  h1 {
+    font-size: 2.8rem;
+    line-height: 1.1;
+  }
+  
+  .typewriter {
+    font-size: 2rem;
   }
 }
 
 @media (max-width: 480px) {
   h1 {
-      font-size: 2.5rem;
+    font-size: 2.2rem;
   }
   
   h2 {
-      font-size: 2rem;
+    font-size: 1.8rem;
   }
   
   .btn-container {
-      flex-direction: column;
+    flex-direction: column;
+    width: 100%;
   }
   
   .section__pic-container {
-      width: 250px;
-      height: 250px;
+    width: 250px;
+    height: 250px;
   }
   
   .details-container {
-      padding: var(--space-md);
+    padding: var(--space-md);
   }
   
   .article-container {
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+  
+  .section__text__p1 {
+    font-size: 1.2rem;
   }
   
   .typewriter {
-      font-size: 2rem;
+    font-size: 1.8rem;
+    height: 2.5rem;
   }
 }
 
