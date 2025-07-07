@@ -24,7 +24,7 @@ const typingConfig = {
 let charIndex = 0;
 let isDeleting = false;
 let currentTypingSpeed = typingConfig.speed;
-const profession = "SOC Analyst";
+const profession = "Cybersecurity Analyst";
 
 // Initialize
 function init() {
