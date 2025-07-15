@@ -45,8 +45,12 @@ function setCurrentYear() {
 
 // Theme functionality
 function setupTheme() {
-    const savedTheme = localStorage.getItem('theme') || 
-        (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    // Always default to dark mode on first load
+    let savedTheme = localStorage.getItem('theme');
+    if (!savedTheme) {
+        savedTheme = 'dark';
+        localStorage.setItem('theme', 'dark');
+    }
     body.setAttribute('data-theme', savedTheme);
     
     themeSwitches.forEach(switchEl => {
