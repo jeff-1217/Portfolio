@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jefrine Correya | Portfolio</title>
+    <title>Jefrine Correya | SOC Analyst</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="particles-js"></div>
     <!-- Loading Screen -->
     <div class="loading-screen">
         <div class="loading-spinner"></div>
@@ -73,7 +74,7 @@
     <section id="profile" class="animate__animated animate__fadeIn">
         <div class="section-container">
             <div class="section__pic-container">
-                <img src="./assets/jeff pr.webp" alt="Jefrine Correya profile picture" class="profile-img">
+                <img src="./assets/jeff pr.png" alt="Jefrine Correya profile picture" class="profile-img">
                 <div class="glow-effect"></div>
             </div>
             <div class="section__text">
@@ -84,7 +85,7 @@
                     <span class="cursor">|</span>
                 </div>
                 <div class="btn-container animate__animated animate__fadeIn animate__delay-2s">
-                    <button class="btn btn-color-2" onclick="location.href='./assets/jefrine-resume.pdf'">
+                    <button class="btn btn-color-2" onclick="location.href='./assets/jefrine_resume.pdf'">
                         Download Resume
                     </button>
                     <button class="btn btn-color-1" onclick="location.href='./#contact'">
@@ -113,7 +114,7 @@
             <div class="about-content">
                 <div class="about-image-container">
                     <div class="section__pic-container">
-                        <img src="./assets/jeffu-modified.webp" alt="profile picture" class="about-pic"/>
+                        <img src="./assets/jeffu-modified.png" alt="profile picture" class="about-pic"/>
                     </div>
                 </div>
                 <div class="about-details-container">
@@ -341,119 +342,215 @@
             </div>
             <div class="experience-details-container">
                 <div class="about-containers projects-grid">
-                    <div class="details-container color-container card">
-                        <div class="project-image-container">
-                            <img src="./assets/project 1.png" alt="project 1" class="project-img"/>
-                            <div class="project-overlay">
-                                <div class="overlay-content">
-                                    <h3>View Project</h3>
-                                </div>
-                            </div>
+                    <div class="flip-card">
+                      <div class="flip-card-inner">
+                        <div class="flip-card-front details-container color-container card">
+                          <div class="project-image-container">
+                              <img src="./assets/project 1.png" alt="project 1" class="project-img"/>
+                              <div class="project-overlay">
+                                  <div class="overlay-content">
+                                      <h3>View Project</h3>
+                                  </div>
+                              </div>
+                          </div>
+                          <h2 class="experience-sub-title project-title">SLMS</h2>
+                          <div class="btn-container">
+                              <button class="btn btn-color-2 projects-btn" onclick="location.href='https://github.com/jeff-1217'"> 
+                                  <i class="fab fa-github"></i> GitHub
+                              </button>
+                              <button class="btn btn-color-1 projects-btn" onclick="location.href='https://github.com/jeff-1217'"> 
+                                  <i class="fas fa-external-link-alt"></i> Live Demo 
+                              </button>
+                          </div>
                         </div>
-                        <h2 class="experience-sub-title project-title">SLMS</h2>
-                        <div class="btn-container">
-                            <button class="btn btn-color-2 projects-btn" onclick="location.href='https://github.com/jeff-1217'"> 
-                                <i class="fab fa-github"></i> GitHub
+                        <div class="flip-card-back">
+                          <h3>SLMS</h3>
+                          <p>Student Leave Management System: A web app to streamline student leave requests and approvals for educational institutions.</p>
+                          <div class="btn-container">
+                            <button class="btn btn-color-2 projects-btn" onclick="location.href='https://github.com/jeff-1217'">
+                              <i class="fab fa-github"></i> GitHub
                             </button>
-                            <button class="btn btn-color-1 projects-btn" onclick="location.href='https://github.com/jeff-1217'"> 
-                                <i class="fas fa-external-link-alt"></i> Live Demo 
+                            <button class="btn btn-color-1 projects-btn" onclick="location.href='https://github.com/jeff-1217'">
+                              <i class="fas fa-external-link-alt"></i> Live Demo
                             </button>
+                          </div>
                         </div>
+                      </div>
                     </div>
-                    <div class="details-container color-container card">
-                        <div class="project-image-container">
-                            <img src="./assets/project-2.png" alt="project 2" class="project-img"/>
-                            <div class="project-overlay">
-                                <div class="overlay-content">
-                                    <h3>View Project</h3>
-                                </div>
-                            </div>
+                    <div class="flip-card">
+                      <div class="flip-card-inner">
+                        <div class="flip-card-front details-container color-container card">
+                          <div class="project-image-container">
+                              <img src="./assets/project-2.png" alt="project 2" class="project-img"/>
+                              <div class="project-overlay">
+                                  <div class="overlay-content">
+                                      <h3>View Project</h3>
+                                  </div>
+                              </div>
+                          </div>
+                          <h2 class="experience-sub-title project-title">Netflix Clone</h2>
+                          <div class="btn-container">
+                              <button class="btn btn-color-2 projects-btn" onclick="location.href='https://github.com/jeff-1217/Netflix-clone'"> 
+                                  <i class="fab fa-github"></i> GitHub
+                              </button>
+                              <button class="btn btn-color-1 projects-btn" onclick="location.href='https://nxcl.netlify.app'"> 
+                                  <i class="fas fa-external-link-alt"></i> Live Demo 
+                              </button>
+                          </div>
                         </div>
-                        <h2 class="experience-sub-title project-title">Netflix Clone</h2>
-                        <div class="btn-container">
-                            <button class="btn btn-color-2 projects-btn" onclick="location.href='https://github.com/jeff-1217/Netflix-clone'"> 
-                                <i class="fab fa-github"></i> GitHub
+                        <div class="flip-card-back">
+                          <h3>Netflix Clone</h3>
+                          <p>A static clone of Netflix, featuring movie browsing, search, and a modern UI built with web technologies.</p>
+                          <div class="btn-container">
+                            <button class="btn btn-color-2 projects-btn" onclick="location.href='https://github.com/jeff-1217/Netflix-clone'">
+                              <i class="fab fa-github"></i> GitHub
                             </button>
-                            <button class="btn btn-color-1 projects-btn" onclick="location.href='https://nxcl.netlify.app'"> 
-                                <i class="fas fa-external-link-alt"></i> Live Demo 
+                            <button class="btn btn-color-1 projects-btn" onclick="location.href='https://nxcl.netlify.app'">
+                              <i class="fas fa-external-link-alt"></i> Live Demo
                             </button>
+                          </div>
                         </div>
+                      </div>
                     </div>
-                    <div class="details-container color-container card">
-                        <div class="project-image-container">
-                            <img src="./assets/project 3.png" alt="project 3" class="project-img"/>
-                            <div class="project-overlay">
-                                <div class="overlay-content">
-                                    <h3>View Project</h3>
-                                </div>
-                            </div>
+                    <div class="flip-card">
+                      <div class="flip-card-inner">
+                        <div class="flip-card-front details-container color-container card">
+                          <div class="project-image-container">
+                              <img src="./assets/project 3.png" alt="project 3" class="project-img"/>
+                              <div class="project-overlay">
+                                  <div class="overlay-content">
+                                      <h3>View Project</h3>
+                                  </div>
+                              </div>
+                          </div>
+                          <h2 class="experience-sub-title project-title">URL Phishing Detector</h2>
+                          <div class="btn-container">
+                              <button class="btn btn-color-2 projects-btn" onclick="location.href='https://github.com/jeff-1217/url-phishing-detector'"> 
+                                  <i class="fab fa-github"></i> GitHub
+                              </button>
+                              <button class="btn btn-color-1 projects-btn" onclick="location.href='https://url-phishing-detector2.vercel.app'"> 
+                                  <i class="fas fa-external-link-alt"></i> Live Demo 
+                              </button>
+                          </div>
                         </div>
-                        <h2 class="experience-sub-title project-title">URL Phishing Detector</h2>
-                        <div class="btn-container">
-                            <button class="btn btn-color-2 projects-btn" onclick="location.href='https://github.com/jeff-1217/url-phishing-detector'"> 
-                                <i class="fab fa-github"></i> GitHub
+                        <div class="flip-card-back">
+                          <h3>URL Phishing Detector</h3>
+                          <p>Detects phishing URLs  by using Google Safe Browsing verdict, helping users avoid malicious websites and online scams.</p>
+                          <div class="btn-container">
+                            <button class="btn btn-color-2 projects-btn" onclick="location.href='https://github.com/jeff-1217/url-phishing-detector'">
+                              <i class="fab fa-github"></i> GitHub
                             </button>
-                            <button class="btn btn-color-1 projects-btn" onclick="location.href='https://url-phishing-detector2.vercel.app'"> 
-                                <i class="fas fa-external-link-alt"></i> Live Demo 
+                            <button class="btn btn-color-1 projects-btn" onclick="location.href='https://url-phishing-detector2.vercel.app'">
+                              <i class="fas fa-external-link-alt"></i> Live Demo
                             </button>
+                          </div>
                         </div>
+                      </div>
                     </div>
-                    <div class="details-container color-container card">
-                        <div class="project-image-container">
-                            <img src="./assets/psc.webp" alt="Password Strength Checker" class="project-img"/>
-                            <div class="project-overlay">
-                                <div class="overlay-content">
-                                    <h3>View Project</h3>
-                                </div>
-                            </div>
+                    <div class="flip-card">
+                      <div class="flip-card-inner">
+                        <div class="flip-card-front details-container color-container card">
+                          <div class="project-image-container">
+                              <img src="./assets/psc.webp" alt="Password Strength Checker" class="project-img"/>
+                              <div class="project-overlay">
+                                  <div class="overlay-content">
+                                      <h3>View Project</h3>
+                                  </div>
+                              </div>
+                          </div>
+                          <h2 class="experience-sub-title project-title">PassChecker</h2>
+                          <div class="btn-container">
+                              <button class="btn btn-color-2 projects-btn" onclick="location.href='https://github.com/jeff-1217/password_strength_checker'"> 
+                                  <i class="fab fa-github"></i> GitHub
+                              </button>
+                              <button class="btn btn-color-1 projects-btn" onclick="location.href='https://password-strength-checker-alpha.vercel.app/'"> 
+                                  <i class="fas fa-external-link-alt"></i> Live Demo 
+                              </button>
+                          </div>
                         </div>
-                        <h2 class="experience-sub-title project-title">PassChecker</h2>
-                        <div class="btn-container">
-                            <button class="btn btn-color-2 projects-btn" onclick="location.href='https://github.com/jeff-1217/password_strength_checker'"> 
-                                <i class="fab fa-github"></i> GitHub
+                        <div class="flip-card-back">
+                          <h3>PassChecker</h3>
+                          <p>Checks password strength in real-time, guiding users to create secure and robust passwords for better online safety.</p>
+                          <div class="btn-container">
+                            <button class="btn btn-color-2 projects-btn" onclick="location.href='https://github.com/jeff-1217/password_strength_checker'">
+                              <i class="fab fa-github"></i> GitHub
                             </button>
-                            <button class="btn btn-color-1 projects-btn" onclick="location.href='https://password-strength-checker-alpha.vercel.app/'"> 
-                                <i class="fas fa-external-link-alt"></i> Live Demo 
+                            <button class="btn btn-color-1 projects-btn" onclick="location.href='https://password-strength-checker-alpha.vercel.app/'">
+                              <i class="fas fa-external-link-alt"></i> Live Demo
                             </button>
+                          </div>
                         </div>
+                      </div>
                     </div>
-                    <div class="details-container color-container card">
-                        <div class="project-image-container">
-                            <img src="./assets/project4.webp" alt="Web Vulnerability Scanner" class="project-img"/>
-                            <div class="project-overlay">
-                                <div class="overlay-content">
-                                    <h3>View Project</h3>
-                                </div>
-                            </div>
+                    <div class="flip-card">
+                      <div class="flip-card-inner">
+                        <div class="flip-card-front details-container color-container card">
+                          <div class="project-image-container">
+                              <img src="./assets/project4.webp" alt="Web Vulnerability Scanner" class="project-img"/>
+                              <div class="project-overlay">
+                                  <div class="overlay-content">
+                                      <h3>View Project</h3>
+                                  </div>
+                              </div>
+                          </div>
+                          <h2 class="experience-sub-title project-title">Web Vulnerability Scanner</h2>
+                          <div class="btn-container">
+                              <button class="btn btn-color-2 projects-btn" onclick="location.href='https://github.com/jeff-1217/web-vuln-scanner'"> 
+                                  <i class="fab fa-github"></i> GitHub
+                              </button>
+                              <button class="btn btn-color-1 projects-btn" onclick="location.href='https://web-vuln-scanner-cyan.vercel.app'"> 
+                                  <i class="fas fa-external-link-alt"></i> Live Demo 
+                              </button>
+                          </div>
                         </div>
-                        <h2 class="experience-sub-title project-title">Web Vulnerability Scanner</h2>
-                        <div class="btn-container">
-                            <button class="btn btn-color-2 projects-btn" onclick="location.href='https://github.com/jeff-1217/web-vuln-scanner'"> 
-                                <i class="fab fa-github"></i> GitHub
+                        <div class="flip-card-back">
+                          <h3>Web Vulnerability Scanner</h3>
+                          <p>Scans websites by using the nmap tool for common vulnerabilities, providing security insights and recommendations for web applications.</p>
+                          <div class="btn-container">
+                            <button class="btn btn-color-2 projects-btn" onclick="location.href='https://github.com/jeff-1217/web-vuln-scanner'">
+                              <i class="fab fa-github"></i> GitHub
                             </button>
-                            <button class="btn btn-color-1 projects-btn" onclick="location.href='https://web-vuln-scanner-cyan.vercel.app'"> 
-                                <i class="fas fa-external-link-alt"></i> Live Demo 
+                            <button class="btn btn-color-1 projects-btn" onclick="location.href='https://web-vuln-scanner-cyan.vercel.app'">
+                              <i class="fas fa-external-link-alt"></i> Live Demo
                             </button>
+                          </div>
                         </div>
+                      </div>
                     </div>
-                    <div class="details-container color-container card">
-                        <div class="project-image-container">
-                            <img src="./assets/aimonitor.webp" alt="Project in Progress" class="project-img"/>
-                            <div class="project-overlay">
-                                <div class="overlay-content">
-                                    <h3>View Project</h3>
-                                </div>
-                            </div>
+                    <div class="flip-card">
+                      <div class="flip-card-inner">
+                        <div class="flip-card-front details-container color-container card">
+                          <div class="project-image-container">
+                              <img src="./assets/aimonitor.webp" alt="Project in Progress" class="project-img"/>
+                              <div class="project-overlay">
+                                  <div class="overlay-content">
+                                      <h3>View Project</h3>
+                                  </div>
+                              </div>
+                          </div>
+                          <h2 class="experience-sub-title project-title">ASTRA Monitor</h2>
+                          <div class="btn-container">
+                              <button class="btn btn-color-2 projects-btn" onclick="location.href='https://github.com/jeff-1217?tab=repositories'"> 
+                                  <i class="fab fa-github"></i> GitHub
+                              </button>
+                              <button class="btn btn-color-1 projects-btn" onclick="location.href='https://github.com/jeff-1217?tab=repositories'"> 
+                                  <i class="fas fa-external-link-alt"></i> Live Demo 
+                              </button>
+                          </div>
                         </div>
-                        <h2 class="experience-sub-title project-title">ASTRA Monitor</h2>
-                        <div class="btn-container">
-                            <button class="btn btn-color-2 projects-btn" onclick="location.href='https://github.com/jeff-1217?tab=repositories'"> 
-                                <i class="fab fa-github"></i> GitHub
+                        <div class="flip-card-back">
+                          <h3>ASTRA Monitor</h3>
+                          <p>AI-based Security Threat Recognition and Analysis: Monitors and analyzes security threats in real-time using AI.</p>
+                          <div class="btn-container">
+                            <button class="btn btn-color-2 projects-btn" onclick="location.href='https://github.com/jeff-1217?tab=repositories'">
+                              <i class="fab fa-github"></i> GitHub
                             </button>
-                            <button class="btn btn-color-1 projects-btn" onclick="location.href='https://github.com/jeff-1217?tab=repositories'"> 
-                                <i class="fas fa-external-link-alt"></i> Live Demo 
+                            <button class="btn btn-color-1 projects-btn" onclick="location.href='https://github.com/jeff-1217?tab=repositories'">
+                              <i class="fas fa-external-link-alt"></i> Live Demo
                             </button>
+                          </div>
                         </div>
+                      </div>
                     </div>
                 </div>
             </div>
@@ -511,6 +608,59 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": {
+          "value": 60,
+          "density": { "enable": true, "value_area": 800 }
+        },
+        "color": { "value": "#00F0FF" },
+        "shape": {
+          "type": "circle",
+          "stroke": { "width": 0, "color": "#000000" }
+        },
+        "opacity": {
+          "value": 0.5,
+          "random": false
+        },
+        "size": {
+          "value": 3,
+          "random": true
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#00F0FF",
+          "opacity": 0.3,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 2,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": { "enable": true, "mode": "grab" },
+          "onclick": { "enable": true, "mode": "push" },
+          "resize": true
+        },
+        "modes": {
+          "grab": { "distance": 140, "line_linked": { "opacity": 0.5 } },
+          "push": { "particles_nb": 4 }
+        }
+      },
+      "retina_detect": true
+    });
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
