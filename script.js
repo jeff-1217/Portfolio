@@ -24,7 +24,9 @@ const typingConfig = {
 let charIndex = 0;
 let isDeleting = false;
 let currentTypingSpeed = typingConfig.speed;
-const profession = "Cybersecurity Analyst";
+const professions = ["Cybersecurity Analyst", "Penetration Tester"];
+let professionIndex = 0;
+let profession = professions[professionIndex];
 
 // Initialize
 function init() {
@@ -175,15 +177,17 @@ function typeWriter() {
         charIndex++;
         currentTypingSpeed = typingConfig.speed;
     }
-    
+
     if (!isDeleting && charIndex === profession.length) {
         isDeleting = true;
         currentTypingSpeed = typingConfig.endPause;
     } else if (isDeleting && charIndex === 0) {
         isDeleting = false;
+        professionIndex = (professionIndex + 1) % professions.length;
+        profession = professions[professionIndex];
         currentTypingSpeed = typingConfig.startPause;
     }
-    
+
     setTimeout(typeWriter, currentTypingSpeed);
 }
 
@@ -247,6 +251,109 @@ function setupScrollAnimations() {
         el.classList.add('reveal');
     });
 }
+
+function loadParticlesForTheme(theme) {
+    if (window.pJSDom && window.pJSDom.length) {
+        window.pJSDom[0].pJS.fn.vendors.destroypJS();
+        window.pJSDom = [];
+    }
+    if (theme === 'light') {
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 60, density: { enable: true, value_area: 800 } },
+                color: { value: "#66FCFF" },
+                shape: { type: "circle", stroke: { width: 0, color: "#000000" } },
+                opacity: { value: 0.85, random: false },
+                size: { value: 3, random: true },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: "#66FCFF",
+                    opacity: 0.6,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 2,
+                    direction: "none",
+                    random: false,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: { enable: true, mode: "grab" },
+                    onclick: { enable: true, mode: "push" },
+                    resize: true
+                },
+                modes: {
+                    grab: { distance: 140, line_linked: { opacity: 0.8 } },
+                    push: { particles_nb: 4 }
+                }
+            },
+            retina_detect: true
+        });
+    } else {
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 60, density: { enable: true, value_area: 800 } },
+                color: { value: "#00F0FF" },
+                shape: { type: "circle", stroke: { width: 0, color: "#000000" } },
+                opacity: { value: 0.5, random: false },
+                size: { value: 3, random: true },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: "#00F0FF",
+                    opacity: 0.3,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 2,
+                    direction: "none",
+                    random: false,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: { enable: true, mode: "grab" },
+                    onclick: { enable: true, mode: "push" },
+                    resize: true
+                },
+                modes: {
+                    grab: { distance: 140, line_linked: { opacity: 0.5 } },
+                    push: { particles_nb: 4 }
+                }
+            },
+            retina_detect: true
+        });
+    }
+}
+
+// Detect initial theme
+const htmlEl = document.documentElement;
+const initialTheme = htmlEl.getAttribute('data-theme') || 'dark';
+loadParticlesForTheme(initialTheme);
+
+// Listen for theme changes
+const themeSwitch = document.getElementById('theme-switch');
+const themeSwitchMobile = document.getElementById('theme-switch-mobile');
+
+function handleThemeChange() {
+    const theme = htmlEl.getAttribute('data-theme') || 'dark';
+    loadParticlesForTheme(theme);
+}
+
+if (themeSwitch) themeSwitch.addEventListener('change', handleThemeChange);
+if (themeSwitchMobile) themeSwitchMobile.addEventListener('change', handleThemeChange);
 
 // Initialize the application
 document.addEventListener('DOMContentLoaded', init);
