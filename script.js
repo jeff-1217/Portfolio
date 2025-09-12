@@ -24,7 +24,7 @@ const typingConfig = {
 let charIndex = 0;
 let isDeleting = false;
 let currentTypingSpeed = typingConfig.speed;
-const professions = ["Cybersecurity Analyst", "Penetration Tester"];
+const professions = ["Cybersecurity Analyst", "SOC Analyst"];
 let professionIndex = 0;
 let profession = professions[professionIndex];
 
